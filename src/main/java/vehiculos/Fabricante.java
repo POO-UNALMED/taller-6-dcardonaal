@@ -33,11 +33,11 @@ public class Fabricante {
 				if (elemento.getNombre()==elementoEnTurno.getNombre()) {
 					x++;	
 				}
-				if (x>Mayor) {
-					Mayor = x;
-					fabricaMayorVentas = elemento;
-					
-				}
+			}
+			
+			if (x>Mayor) {
+				Mayor = x;
+				fabricaMayorVentas = elemento;
 				
 			}
 		}

@@ -33,12 +33,10 @@ public class Pais {
 				if (elemento.getNombre()==elementoEnTurno.getNombre()) {
 					x++;	
 				}
-				if (x>Mayor) {
-					Mayor = x;
-					paisMayorVentas = elemento;
-					
-				}
-				
+			}
+			if (x>Mayor) {
+				Mayor = x;
+				paisMayorVentas = elemento;
 			}
 		}
 		return paisMayorVentas;
