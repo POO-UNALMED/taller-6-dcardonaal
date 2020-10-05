@@ -10,8 +10,8 @@ public class Vehiculo {
 	private double peso;
 	private String traccion;
 	private Fabricante fabricante;
-	private static List<Vehiculo> vehiculos =  new ArrayList();
-	private static List<Pais> paises =  new ArrayList();;
+	public static List<Vehiculo> vehiculos =  new ArrayList();
+	
 	
 	public Vehiculo() {
 		vehiculos.add(this);
@@ -32,30 +32,7 @@ public class Vehiculo {
 		vehiculos.add(this);
 	}
 	
-	
-	public Pais paisMasVendedor() {
-		int x=0;
-		int Mayor=0;
-		Pais paisMayorVentas = null;
-		for (Vehiculo elemento: vehiculos) {
-			paises.add(elemento.getFabricante().getPais());
-		}
-		
-		for (Pais elemento: paises) {
-			for (Pais elementoEnTurno: paises) {
-				if (elemento.getNombre()==elementoEnTurno.getNombre()) {
-					x++;	
-				}
-				if (x>Mayor) {
-					Mayor = x;
-					paisMayorVentas = elemento;
-					
-				}
-				
-			}
-		}
-		return paisMayorVentas;
-	}
+
 	
 	
 	public static int getCantidadVehiculos() {
