@@ -11,10 +11,12 @@ public class Vehiculo {
 	private String traccion;
 	private Fabricante fabricante;
 	public static List<Vehiculo> vehiculos =  new ArrayList();
+	private static int cantidadVehiculos;
 	
 	
 	public Vehiculo() {
 		vehiculos.add(this);
+		cantidadVehiculos++;
 		
 	}
 	
@@ -30,14 +32,19 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		vehiculos.add(this);
+		cantidadVehiculos++;
 	}
 	
 
 	
 	
 	public static int getCantidadVehiculos() {
-		return vehiculos.size();
+		return cantidadVehiculos;
 		
+	}
+	
+	public static void setCantidadVehiculos(int cantidad) {
+		cantidadVehiculos = cantidad;
 	}
 	
 	public static String vehiculosPorTipo() {

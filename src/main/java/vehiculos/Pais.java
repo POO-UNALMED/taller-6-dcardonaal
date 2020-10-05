@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pais {
 	private String nombre;
-	private static List<Pais> paises =  new ArrayList();;
+	private static List<Pais> paises =  new ArrayList();
 	
 	
 	public Pais() {
