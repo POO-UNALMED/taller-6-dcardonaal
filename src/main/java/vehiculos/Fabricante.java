@@ -4,8 +4,17 @@ public class Fabricante {
 	private String nombre;
 	private Pais pais;
 	
-
 	
+	
+	public Fabricante() {
+		super();
+	}
+	
+	public Fabricante(String nombre, Pais pais) {
+		super();
+		this.nombre = nombre;
+		this.pais = pais;
+	}
 	public String getNombre() {
 		return nombre;
 	}
