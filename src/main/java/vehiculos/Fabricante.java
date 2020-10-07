@@ -27,6 +27,7 @@ public class Fabricante {
 
 		
 		for (Fabricante elemento: fabricas) {
+			x=0;
 			for (Fabricante elementoEnTurno: fabricas) {
 				if (elemento==elementoEnTurno) {
 					x++;	
