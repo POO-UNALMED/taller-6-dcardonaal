@@ -23,14 +23,12 @@ public class Fabricante {
 	public static Fabricante fabricaMayorVentas() {
 		int x=0;
 		int Mayor=0;
-		Fabricante fabricaMayorVentas = null;
-		for (Vehiculo elemento: Vehiculo.vehiculos) {
-			fabricas.add(elemento.getFabricante());
-		}
+		Fabricante fabricaMayorVentas = new Fabricante();
+
 		
 		for (Fabricante elemento: fabricas) {
 			for (Fabricante elementoEnTurno: fabricas) {
-				if (elemento.getNombre()==elementoEnTurno.getNombre()) {
+				if (elemento==elementoEnTurno) {
 					x++;	
 				}
 			}
@@ -57,7 +55,10 @@ public class Fabricante {
 	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
-
+	
+	public static List<Fabricante> getFabricas(){
+		return fabricas;
+	}
 	
 	
 	

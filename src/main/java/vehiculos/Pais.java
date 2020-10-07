@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Pais {
 	private String nombre;
+	
 	private static List<Pais> paises =  new ArrayList();
 	
 	
@@ -24,13 +25,11 @@ public class Pais {
 		int x=0;
 		int Mayor=0;
 		Pais paisMayorVentas = null;
-		for (Vehiculo elemento: Vehiculo.vehiculos) {
-			paises.add(elemento.getFabricante().getPais());
-		}
 		
 		for (Pais elemento: paises) {
+			x = 0;
 			for (Pais elementoEnTurno: paises) {
-				if (elemento.getNombre()==elementoEnTurno.getNombre()) {
+				if (elemento == elementoEnTurno) {
 					x++;	
 				}
 			}
@@ -52,6 +51,9 @@ public class Pais {
 		this.nombre = nombre;
 	}
 	
+    public static List<Pais> getPaises() {
+        return paises;
+    }
 	
 	
 
